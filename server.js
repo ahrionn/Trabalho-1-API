@@ -7,6 +7,9 @@ app.use(express.json())
 // Create
 app.post("/clients", function(req, res){
     
+    const { name, email } = req.body
+
+    res.json({ name, email })
 })
 
 // Read
