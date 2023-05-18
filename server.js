@@ -13,9 +13,9 @@ app.use(express.json())
 // http://localhost:3000/clients
 app.post("/clients", function(req, res){
     
-    const { name, email } = req.body
+    const { isbn, name, author, editor, publishYear } = req.body
 
-    res.json({ name, email })
+    res.json({ isbn, name, author, editor, publishYear })
 })
 
 // READ
