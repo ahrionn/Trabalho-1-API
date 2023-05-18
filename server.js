@@ -34,7 +34,7 @@ app.get("/clients", function(req, res){
 app.put("/clients/:id", function(req, res){
 
     const { id } = req.params
-    const client = data.find(cli => cli.id = id)
+    const client = data.find(cli => cli.id == id)
 
     if (!client) return res.status(204).json()
 
@@ -53,8 +53,13 @@ app.delete("/clients/:id", function(req, res){
 
     const { id } = req.params
     const filteredClients = data.filter(client => client.id != id)
+    const client = data.find(cli => cli.id == id)
 
-    res.json(filteredClients)
+    if (!client) {
+        return res.status(204).json()
+    } else {
+        res.json(filteredClients)
+    }
 })
 
 app.listen(3000, function() {
