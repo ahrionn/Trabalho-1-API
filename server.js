@@ -4,7 +4,13 @@ const data = require('./data.json')
 
 app.use(express.json())
 
-// Create
+// CREATE
+// Tem body
+// {
+//  "name":"Luam",
+//  "email":"lala@hotmail"
+// }
+// http://localhost:3000/clients
 app.post("/clients", function(req, res){
     
     const { name, email } = req.body
@@ -12,19 +18,43 @@ app.post("/clients", function(req, res){
     res.json({ name, email })
 })
 
-// Read
+// READ
+// Não tem body
+// http://localhost:3000/clients
 app.get("/clients", function(req, res){
     res.json(data)
 })
 
-// Update
-app.put("/clients", function(req, res){
+// UPDATE
+// Tem body
+// {
+//  "name":"Zé Carioca"
+// }
+// http://localhost:3000/clients/id
+app.put("/clients/:id", function(req, res){
+
+    const { id } = req.params
+    const client = data.find(cli => cli.id = id)
+
+    if (!client) return res.status(204).json()
+
+    const { name } = req.body
+
+    client.name = name
+
+    res.json(client)
 
 })
 
-// Delete
-app.delete("/clients", function(req, res){
+// DELETE
+// Não tem body
+// http://localhost:3000/clients/id
+app.delete("/clients/:id", function(req, res){
 
+    const { id } = req.params
+    const filteredClients = data.filter(client => client.id != id)
+
+    res.json(filteredClients)
 })
 
 app.listen(3000, function() {
