@@ -4,7 +4,7 @@ const data = require('./data.json')
 
 app.use(express.json())
 
-// CREATE
+// CREATE - post
 // Tem body
 // {
 //  "isbn":9788535921878, 
@@ -12,7 +12,7 @@ app.use(express.json())
 //  "author":"Daniel Galera", 
 //  "editor":"Companhia das Letras", 
 //  "publishYear":2012
-//}
+// }
 // http://localhost:3000/clients
 
 let nextId = 11
@@ -26,14 +26,18 @@ app.post("/clients", function(req, res) {
     nextId++
 })
 
-// READ
+// READ - get
 // Não tem body
 // http://localhost:3000/clients
 app.get("/clients", function(req, res) {
     res.json(data)
+
+    const legal = {}
+
+    console.log(legal)
 })
 
-// UPDATE
+// UPDATE - put
 // Tem body
 // {
 //  "name":"Zé Carioca"
@@ -53,7 +57,7 @@ app.put("/clients/:id", function(req, res) {
     res.json(client)
 })
 
-// DELETE
+// DELETE - delete
 // Não tem body
 // http://localhost:3000/clients/id
 app.delete("/clients/:id", function(req, res) {
