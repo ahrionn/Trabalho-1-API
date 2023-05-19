@@ -9,74 +9,74 @@
     },
     {
       "id": 2,
-      "isbn": 0, 
-      "name": "", 
-      "author": "", 
-      "editor": "", 
-      "publishYear": 0
+      "isbn": 9780345409461, 
+      "name": "O Mundo Assombrado pelos Demônios", 
+      "author": "Carl Sagan & Ann Druyan", 
+      "editor": "Companhia das Letras", 
+      "publishYear": 1995
     },
     {
       "id": 3,
-      "isbn": 0, 
-      "name": "", 
-      "author": "", 
-      "editor": "", 
-      "publishYear": 0
+      "isbn": 8556510760, 
+      "name": "Fogo & Sangue", 
+      "author": "George R.R. Martin", 
+      "editor": "Suma", 
+      "publishYear": 2018
     },
     {
       "id": 4,
-      "isbn": 0, 
-      "name": "", 
-      "author": "", 
-      "editor": "", 
-      "publishYear": 0
+      "isbn": 8566636252, 
+      "name": "A Menina Submersa", 
+      "author": "Caitlín R. Kiernan", 
+      "editor": "Darkside", 
+      "publishYear": 2014
     },
     {
       "id": 5,
-      "isbn": 0, 
-      "name": "", 
-      "author": "", 
-      "editor": "", 
-      "publishYear": 0
+      "isbn": 8541810089, 
+      "name": "Onde as Árvores Cantam", 
+      "author": "Laura Gallego Garcia", 
+      "editor": "SM", 
+      "publishYear": 2012
     },
     {
       "id": 6,
-      "isbn": 0, 
-      "name": "", 
-      "author": "", 
-      "editor": "", 
-      "publishYear": 0
+      "isbn": 9788535905984, 
+      "name": "Um Certo Capitão Rodrigo", 
+      "author": "Érico Veríssimo", 
+      "editor": "Companhia das Letras", 
+      "publishYear": 1970
     },
     {
       "id": 7,
-      "isbn": 0, 
-      "name": "", 
-      "author": "", 
-      "editor": "", 
-      "publishYear": 0
+      "isbn": 9780316245289, 
+      "name": "O Orfanato da Srta. Peregrine para Crianças Peculiares", 
+      "author": "Ransom Riggs", 
+      "editor": "Casa dos Mundos", 
+      "publishYear": 2011
     },
     {
       "id": 8,
-      "isbn": 0, 
-      "name": "", 
-      "author": "", 
-      "editor": "", 
-      "publishYear": 0
+      "isbn": 9788869186127, 
+      "name": "Harry Potter e o Prisioneiro de Azkaban", 
+      "author": "J.K. Rowling", 
+      "editor": "Rocco", 
+      "publishYear": 1999
     },
     {
       "id": 9,
-      "isbn": 0, 
-      "name": "", 
-      "author": "", 
-      "editor": "", 
-      "publishYear": 0
+      "isbn": 8551006754, 
+      "name": "Coraline", 
+      "author": "Neil Gaiman", 
+      "editor": "Intrínseca", 
+      "publishYear": 2002
     },
     {
       "id": 10,
-      "isbn": 0, 
-      "name": "", 
-      "author": "", 
-      "editor": "", 
-      "publishYear": 0
+      "isbn": 8542212975, 
+      "name": "O Poder", 
+      "author": "Naomi Alderman", 
+      "editor": "Planeta Minotauro", 
+      "publishYear": 2017
     }
   ]
