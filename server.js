@@ -15,15 +15,17 @@ app.use(express.json())
 // }
 // http://localhost:3000/clients
 
-let nextId = 11
+let id = 11
 
 app.post("/clients", function(req, res) {
     
     const { isbn, name, author, editor, publishYear } = req.body
 
-    res.json({ nextId, isbn, name, author, editor, publishYear })
+    data.push({ id, isbn, name, author, editor, publishYear })
 
-    nextId++
+    res.json({ id, isbn, name, author, editor, publishYear })
+
+    id++
 })
 
 // READ - get
@@ -31,10 +33,6 @@ app.post("/clients", function(req, res) {
 // http://localhost:3000/clients
 app.get("/clients", function(req, res) {
     res.json(data)
-
-    const legal = {}
-
-    console.log(legal)
 })
 
 // UPDATE - put
@@ -69,6 +67,7 @@ app.delete("/clients/:id", function(req, res) {
     if (!client) {
         return res.status(204).json()
     } else {
+        data.splice(id-1, 1)
         res.json(filteredClients)
     }
 })
