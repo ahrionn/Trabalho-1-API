@@ -4,6 +4,8 @@ const data = require('./data.json')
 
 app.use(express.json())
 
+// TRABALHO DE FULLSTACK
+
 // CREATE - post
 // Tem body
 // {
