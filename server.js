@@ -13,11 +13,9 @@ app.use(express.json())
 //  "editor":"Companhia das Letras", 
 //  "publishYear":2012
 // }
-// http://localhost:3000/clients
-
+// http://localhost:3000/books
 let id = 11
-
-app.post("/clients", function(req, res) {
+app.post("/books", function(req, res) {
     
     const { isbn, name, author, editor, publishYear } = req.body
 
@@ -30,9 +28,18 @@ app.post("/clients", function(req, res) {
 
 // READ - get
 // Não tem body
-// http://localhost:3000/clients
-app.get("/clients", function(req, res) {
+// http://localhost:3000/books
+app.get("/books", function(req, res) {
     res.json(data)
+})
+
+// READ - get by id
+app.get("/books/:id", function(req, res) {
+    
+    const { id } = req.params
+    const book = data.find(cli => cli.id == id)
+
+    res.json(book)
 })
 
 // UPDATE - put
@@ -40,35 +47,35 @@ app.get("/clients", function(req, res) {
 // {
 //  "name":"Zé Carioca"
 // }
-// http://localhost:3000/clients/id
-app.put("/clients/:id", function(req, res) {
+// http://localhost:3000/books/id
+app.put("/books/:id", function(req, res) {
 
     const { id } = req.params
-    const client = data.find(cli => cli.id == id)
+    const book = data.find(cli => cli.id == id)
 
-    if (!client) return res.status(204).json()
+    if (!book) return res.status(204).json()
 
     const { name } = req.body
 
-    client.name = name
+    book.name = name
 
-    res.json(client)
+    res.json(book)
 })
 
 // DELETE - delete
 // Não tem body
-// http://localhost:3000/clients/id
-app.delete("/clients/:id", function(req, res) {
+// http://localhost:3000/books/id
+app.delete("/books/:id", function(req, res) {
 
     const { id } = req.params
-    const filteredClients = data.filter(client => client.id != id)
-    const client = data.find(cli => cli.id == id)
+    const filteredBooks = data.filter(book => book.id != id)
+    const book = data.find(cli => cli.id == id)
 
-    if (!client) {
+    if (!book) {
         return res.status(204).json()
     } else {
         data.splice(id-1, 1)
-        res.json(filteredClients)
+        res.json(filteredBooks)
     }
 })
 
