@@ -4,6 +4,8 @@ const data = require('./data.json')
 
 app.use(express.json())
 
+// TRABALHO DE API
+
 // CREATE - post
 // Tem body
 // {
